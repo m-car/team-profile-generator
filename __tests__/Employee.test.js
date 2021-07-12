@@ -20,6 +20,16 @@ describe("Employee class", ()=>{
         })
         
     })
+    describe("getName",() => {
+        //arrange
+        const employee = new Employee("marko", 5, "marko@gmail.com");
+        //act
+        const result = employee.getName()
+
+        //assert
+        expect(result).toEqual("marko");
+
+    })
 })
 
 
