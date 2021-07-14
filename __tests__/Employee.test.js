@@ -15,7 +15,9 @@ describe("Employee class", ()=>{
             expect(employee).toEqual({
                 name:"marko", 
                 id: 5, 
-                email: "marko@gmail.com"
+                email: "marko@gmail.com",
+                role: "employee"
+                
             });
         })
         
@@ -29,6 +31,21 @@ describe("Employee class", ()=>{
         //assert
         expect(result).toEqual("marko");
 
+    })
+    describe("getID", () => {
+        const employee = new Employee("marko", 5, "marko@gmail.com");
+        const result = employee.getID()
+        expect(result).toEqual(5)
+    })
+    describe("getEmail", () =>{
+        const employee = new Employee("marko", 5, "marko@gmail.com");
+        const result = employee.getEmail();
+        expect(result).toEqual("marko@gmail.com");
+    })
+    describe("getRole", () =>{
+        const employee = new Employee("marko", 5, "marko@gmail.com");
+        const result = employee.getRole();
+        expect(result).toEqual("employee");
     })
 })
 
