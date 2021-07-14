@@ -9,7 +9,7 @@ describe("Employee class", ()=>{
             const name = "marko"
 
             //act
-            const employee = new Employee("marko", 5, "marko@gmail.com")
+            const employee = new Employee(name, 5, "marko@gmail.com")
 
             //assert
             expect(employee).toEqual({
